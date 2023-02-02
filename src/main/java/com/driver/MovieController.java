@@ -37,7 +37,7 @@ public ResponseEntity addMovie(@RequestBody Movie movie){
     return new ResponseEntity(movieService.getDirectorByName(director),HttpStatus.FOUND);
 }
 @GetMapping("/get-movie-by-director-name/{director}")
-    public ResponseEntity getMovieByDirectorName(@PathVariable("director") String director){
+    public ResponseEntity getMoviesByDirectorName(@PathVariable("director") String director){
     return new ResponseEntity(movieService.getMoviesByDirectorName(director),HttpStatus.FOUND);
 }
 @GetMapping("/get-all-movies")
